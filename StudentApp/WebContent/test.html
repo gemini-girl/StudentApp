@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+    function myFunction() {
+        var input = document.getElementById("searchTxt").defaultValue ;
+        alert(input);
+    }
+    function Function() {
+        var input = document.getElementById("search").defaultValue ;
+        document.getElementById('error').innerHTML=input;
+    }
+
+</script>
+</head>
+<body>
+<form onSubmit="return myFunction()">
+<input name="searchTxt" type="text" id="searchTxt" value = "hello"/>
+<input type="submit"/>
+</form>
+
+<form onSubmit="return Function()">
+<input name="searchTxt" type="text" id="search" value = "bye"/>
+<p><b><div style="color:red" id ="error"> </div></b></p>
+
+<input type="submit"/>
+</form>
+</body>
+</html>

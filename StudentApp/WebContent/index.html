@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <script>
+function validation() {
+    var x = document.forms["myform"]["user"].value;
+    if (x == null || x == "")  {
+        document.getElementById('fError').innerHTML="Username you entered is incorrect or empty";
+        return false;
+    }else {
+        document.getElementById('fError').innerHTML="";
+    }
+    var y = document.forms["myform"]["pwd"].value;
+    if (y == null || y == "") {
+        document.getElementById('pError').innerHTML="Password you entered is incorrect or empty";
+        return false;
+    }else{
+        document.getElementById('pError').innerHTML="";
+    }
+}
+</script>
+</head>
+<body>
+
+<header>
+    <center>
+  <hgroup>    
+    <h2>ONLINE SCHOOL</h2>
+  </hgroup>
+    </center>
+
+
+</header>
+  
+<section>
+<article>
+<center>
+<form action = "login" name = "myform" onsubmit="return validation();" method = "get"> 
+    <p><label>Username:</label><input type="text" id="user" name="user" ></p>
+        <p><b><div style="color:red" id ="fError"> </div></b></p>
+    <p><label>Password:</label><input type="password" id="pwd" name="pwd" ></p>
+        <p><b><div style="color:red" id ="pError"> </div></b></p>
+    <p><input type="submit" value="Login"/></p>
+    
+</form>
+</center>
+</article>
+</section>
+
+<footer>
+    <center>
+    	<small>Copyright © 2015</small>
+    </center>
+
+</footer>
+</body>
+</html>
+</body>
+</html>
